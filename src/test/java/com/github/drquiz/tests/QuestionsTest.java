@@ -1,21 +1,12 @@
-package com.github.qrquiz;
+package com.github.drquiz.tests;
 
-import com.codeborne.selenide.Selectors;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
-public class QuestionsTest {
-
-
-    @Before
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/Users/Erik/distribs/chrome/chromedriver");
-        open("http://drquiz.zapto.org/");
-    }
+public class QuestionsTest extends BaseTest{
 
     @Test
     public void testAmountOfQuestions() {
