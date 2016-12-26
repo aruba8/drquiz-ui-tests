@@ -12,7 +12,7 @@ public class BaseTest {
     @Before
     public void setUp() {
         ConfigReader configReader = new ConfigReader();
-        System.setProperty("webdriver.gecko.driver", configReader.getProperties().getProperty("webdriver.chrome.driver"));
+        System.setProperty("webdriver.chrome.driver", configReader.getProperties().getProperty("webdriver.chrome.driver"));
         webappUrl = configReader.getProperties().getProperty("webapp.url");
         open(webappUrl);
     }
